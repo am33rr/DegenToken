@@ -1,41 +1,44 @@
-# Project Title
+# Degen Token
 
-Simple overview of use/purpose.
+DegenToken is an ERC20 token deployed on the Avalanche Fuji Testnet. It features minting, burning, and redeeming functionalities. The token can be used to redeem various phones based on the token holder's balance.
 
-## Description
+## Deployed Contract
+The contract is deployed on the Avalanche Fuji Testnet.
 
-An in-depth paragraph about your project and overview of use.
+### Contract Details
+* Token Name: Degen
+* Token Symbol: DGN
+* Decimals: 18
+* Initial Supply: 0 (tokens must be minted by the owner)
 
-## Getting Started
+### Phone Redemption
+Holders can redeem their tokens for the following phones:
 
-### Installing
+- Redmi
+- One Plus
+- iPhone
+  
+The redemption process decreases the available count of the respective phone and burns the holder's tokens. The required token amounts for redemption are:
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* Redmi: 400 DGN
+* One Plus: 800 DGN
+* iPhone: 1200 DGN
 
-### Executing program
+## How to Use:
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+1. Clone this repository.
+2. Install dependencies using `npm install`.
+3. Create a .env file with your private key with funds and snowtrace api key
+4. deploy the contract to avalanche by running `npx hardhat run scripts/deploy.js --network fuji `
+5. verify the contract by running `npx hardhat verify _address_ --network fuji`
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
-Contributors names and contact info
+Ameer S
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
+Email - am33rrss@gmail.com
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the [MIT] License.
